@@ -1,24 +1,4 @@
-chrome.storage.local.get("trangthai", function(result) 
-{
-	if (result.trangthai==undefined)
-	{
-		
-		chrome.storage.local.set({trangthai:1}, function() 
-		{
-			console.log('Mặc định trạng thái check thẻ hoạt động');
-			runBHYT();
-        });
-		console.log(result.trangthai);
-	}else if (result.trangthai==1) 
-	{
-		runBHYT();
-		console.log('Đã chạy check thẻ');
-	}else 
-	{
-		console.log(result.trangthai);
-		console.log('Không check thẻ');
-	}
-});
+
 function reloadDataSelXa(maHuyen, maXa) {
         var fqh;
         fqh = $("#maxa_cu_tru");
@@ -83,8 +63,7 @@ function reloadDataSelHuyen(maTinh, maHuyen, maXa) {
         });
     }
 //Run BHYT
-function runBHYT()
-{
+
 	//MD5
 	;(function ($) {
 
@@ -2112,7 +2091,7 @@ function runBHYT()
 																	link.href = uri + base64(format(template, ctx))
 																	link.click();	
 																});	*/
-}
+
 /* sự kiện click chuột phải
 $(document).bind('contextmenu','#right', function(e){
     e.preventDefault();
