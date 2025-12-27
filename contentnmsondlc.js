@@ -194,4 +194,6 @@ function buildKtvShift(ktv){
  });
  return m;
 }
+window.chiaLich = chiaLich;
+
 
