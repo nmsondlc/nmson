@@ -25,17 +25,6 @@ function exportExcel(arr){
  XLSX.utils.book_append_sheet(wb,ws,"DVKT");
  XLSX.writeFile(wb,"dvkt_chia_lich.xlsx");
 }
-
-
-
-
-
-
-
-
-
-
-
 /* ================== TIME UTILS ================== */
 function timeToMin(s){
  if(!s) return null;
@@ -205,3 +194,4 @@ function buildKtvShift(ktv){
  });
  return m;
 }
+
